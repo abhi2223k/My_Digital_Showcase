@@ -1,0 +1,363 @@
+/* Global Styles */
+body {
+  background: linear-gradient(135deg, rgba(255, 204, 204, 0.8), rgba(204, 229, 255, 0.8)),
+              url('path/to/your/background-image.jpg'); /* Soft gradient background */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  font-family: 'Arial', sans-serif; /* Clean font */
+  color: #333; /* Dark text for contrast */
+  transition: background 0.5s ease, color 0.3s ease;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1d; /* Dark background for navbar */
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo h1 {
+  color: #f4f4f4; /* Light logo color */
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul li {
+  margin-left: 25px;
+}
+
+.nav-links ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  background-color: #f05454; /* Add red hover effect */
+  transform: scale(1.1);
+}
+
+/* Dark Mode Toggle */
+#mode-toggle {
+  cursor: pointer;
+  background-color: #444;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#mode-toggle:hover {
+  background-color: #f05454; /* Hover effect */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+body.dark-mode .navbar {
+  background-color: #222;
+}
+
+body.dark-mode .nav-links ul li a {
+  color: #f4f4f4;
+}
+
+body.dark-mode .nav-links ul li a:hover {
+  background-color: #777;
+}
+
+body.dark-mode #mode-toggle {
+  background-color: #888;
+}
+
+body.dark-mode #mode-toggle:hover {
+  background-color: #aaa;
+}
+
+/* Introduction Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 120px;
+  margin-bottom: 50px;
+}
+
+.intro-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1a1a1d;
+  margin: 10px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro p, .intro ul {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.intro a {
+  color: #f05454;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the entire image is contained within the circle */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Statistics Section */
+.statistics {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.stat {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  color: #f05454;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Skills Section */
+.skills {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: #1a1a1d;
+  margin-bottom: 40px;
+}
+
+.skills-logos {
+  display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap to the next line */
+  justify-content: center; /* Center the logos */
+}
+
+.skills-logos img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skills-logos img:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Projects Section */
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #1a1a1d;
+  margin-bottom: 40px;
+}
+
+/* CSS Grid for Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  font-size: 1.8rem;
+  color: #f05454;
+}
+
+.project p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.project a {
+  color: #f05454;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+  background-color: #1a1a1d;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+
+footer form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+footer form input,
+footer form textarea {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+footer form button {
+  padding: 12px;
+  background-color: #f05454;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer form button:hover {
+  background-color: #d93a3a;
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f05454;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #d93a3a;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .skills-logos img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .projects {
+      grid-template-columns: 1fr;
+  }
+
+  .intro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .intro-image {
+      margin-top: 20px;
+  }
+}
+/* Centering My Projects Title */
+#projects h1 {
+  text-align: center; /* Center the text horizontally */
+  font-size: 2.5rem; /* Adjust the font size */
+  color: #1a1a1d; /* Title color */
+  margin-bottom: 40px; /* Add spacing below the title */
+}
